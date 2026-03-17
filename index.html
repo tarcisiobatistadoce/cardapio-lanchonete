@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>🍔 Lanchonete Digital - Cardápio Online</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo">🍔 Lanchonete</div>
+                <span>Delivery</span>
+            </div>
+            <div class="cart-icon" onclick="toggleCarrinho()">
+                🛒
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" class="search-box" id="search-input" placeholder="🔍 Buscar por nome ou descrição...">
+    </div>
+
+    <div class="categorias" id="categorias">
+        <button class="categoria-btn ativo" data-categoria="todos">Todos</button>
+        <button class="categoria-btn" data-categoria="hamburguer">🍔 Hambúrgueres</button>
+        <button class="categoria-btn" data-categoria="bebida">🥤 Bebidas</button>
+        <button class="categoria-btn" data-categoria="combo">🍟 Combos</button>
+        <button class="categoria-btn" data-categoria="sobremesa">🍰 Sobremesas</button>
+    </div>
+
+    <div class="produtos-container" id="produtos-container">
+        <!-- Os produtos serão carregados aqui pelo JavaScript -->
+    </div>
+
+    <div class="carrinho-sidebar" id="carrinho">
+        <div class="carrinho-header">
+            <span>🛒 Seu Pedido</span>
+            <button onclick="toggleCarrinho()">✕</button>
+        </div>
+        <div id="carrinho-itens">
+            <!-- Itens do carrinho serão inseridos aqui -->
+        </div>
+        <div class="carrinho-total" id="carrinho-total">
+            <span>Total:</span>
+            <span id="total-valor">R$ 0,00</span>
+        </div>
+        <button class="btn-whatsapp" id="finalizar-pedido" onclick="finalizarPedido()">
+            📲 Finalizar Pedido via WhatsApp
+        </button>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
